@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    input[type=text],[type=password] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }  
+    input[type=submit]{
+      width: 80%;
+      background-color: #33cc00;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;      
+    }
+    body{
+      text-align: center;
+    }
+    div {
+      position: fixed;
+      top: 180px;
+      left: 25px;
+      width: 50%;
+      border-radius: 3px;
+      background-color: #e6ac00;
+      padding: 20px;
+      margin: auto; 
+    }  
+    h1 {
+      position: fixed;
+      top: 120px;
+      left: 250px;
+      color: #000000;
+      text-align: center;
+    }  
+
+    label {
+        font-weight: bold;
+    }
+
+  </style>
+
+  <body background="/shop.jpg">
+    <h1>Welcome to Localhost!</h1>
+    <div>
+      <form action="/login" method="post">
+        <label for="username">Username</label>
+        <br/><input name="username" type="text" placeholder="Username" required/>
+        <br/><label for="password">Password</label>
+        <br/><input name="password" type="password" placeholder="Password" required/>
+
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </body>
+</html>

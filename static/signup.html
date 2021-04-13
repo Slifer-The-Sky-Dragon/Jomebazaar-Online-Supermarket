@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    input[type=text],[type=password] {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }  
+    input[type=submit]{
+      width: 80%;
+      background-color: #33cc00;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;      
+    }
+    body{
+      text-align: center;
+    }
+    div {
+      position: fixed;
+      top: 180px;
+      left: 25px;
+      width: 50%;
+      border-radius: 3px;
+      background-color: #e6ac00;
+      padding: 20px;
+      margin: auto; 
+    }  
+    h1 {
+      position: fixed;
+      top: 120px;
+      left: 250px;
+      color: #000000;
+      text-align: center;
+    }  
+
+    .form-radio
+    {
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         appearance: none;
+         display: inline-block;
+         position: relative;
+         background-color: #f1f1f1;
+         color: #666;
+         top: 10px;
+         height: 30px;
+         width: 30px;
+         border: 0;
+         border-radius: 50px;
+         cursor: pointer;     
+         margin-right: 7px;
+         outline: none;
+    }
+    .form-radio:checked::before
+    {
+         position: absolute;
+         font: 13px/1 'Open Sans', sans-serif;
+         left: 11px;
+         top: 7px;
+         content: '\02143';
+         transform: rotate(40deg);
+    }
+    .form-radio:hover
+    {
+         background-color: #f7f7f7;
+    }
+    .form-radio:checked
+    {
+         background-color: #f1f1f1;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+  </style>
+
+  <body background="/shop.jpg">
+    <h1>Welcome to Localhost!</h1>
+    <div>
+      <form action="/signup" method="post">
+        <label for="username">Username</label>
+        <br/><input name="username" type="text" placeholder="Username" required/>
+        <br/><label for="password">Password</label>
+        <br/><input name="password" type="password" placeholder="Password" required/>
+        <br/><label for="Re_enter_password">Re-enter password</label>
+        <br/><input name="Re_enter_password" type = "password" placeholder="Password" required/>
+        <br/><label for="email">Email</label>
+        <br/><input name="email" type = "text" placeholder="email@email.com" required/>
+
+        <br/><label for="type_of_user">Account type : </label>
+        <label for="buyer">Buyer</label>
+        <input type="radio" name="user_type" id="buyer" value="buyer" class="form-radio" required>
+        <label for="seller">Seller</label>
+        <input type="radio" name="user_type" id="seller" value="seller" class="form-radio" required><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>
